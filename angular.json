@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "b2w-challenge"
+  "defaultProject": "b2w-challenge",
+  "cli": {
+    "analytics": "48e0a9dd-c04c-45e6-a37b-c7f17e62fbeb"
+  }
 }
