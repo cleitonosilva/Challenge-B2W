@@ -132,5 +132,32 @@
         }
       }
     }
+
+    .info--user--box{
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .info--user{
+          color: #ffff;
+          margin: none;  
+
+          @media (min-width: 721px) {
+              font-size: 40px;
+          }
+        }
+        .info--country{
+            color: #ffff;
+            margin: none;  
+  
+            @media (min-width: 721px) {
+                font-size: 20px;
+            }
+        }
+    }
   }
 }
