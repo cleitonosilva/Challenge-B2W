@@ -38,7 +38,7 @@ const name = {
   title : "Srs", 
 };
 const picture = {
-  large : "https://randomuser.me/api/portraits/men/39.jpg",
+  large : "../../assets/profile-outback.jpg",
   medium : "https://randomuser.me/api/portraits/med/men/39.jpg",
   thumbnail : "https://randomuser.me/api/portraits/thumb/men/39.jpg" 
 };
