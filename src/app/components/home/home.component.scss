@@ -60,6 +60,7 @@
       border-color: rgba(0, 0, 0, 0.096);
       border-width: 2px;
       box-shadow: 0 0 1em rgba(0, 0, 0, 0.096);
+      background: #fbfbfb;
 
       .box--bg {
         width: 100%;
@@ -198,6 +199,8 @@
   display: flex;
   justify-content: center;
   justify-items: center;
+  background: #f6f6f6;
+
   
 
   @media (max-width: 504px) {
@@ -227,6 +230,7 @@
       border-color: rgba(0, 0, 0, 0.096);
       border-width: 2px;
       box-shadow: 0 0 1em rgba(0, 0, 0, 0.096);
+      background: #fbfbfb;
 
     @media (max-width: 400px) {
       display: flex;
@@ -245,6 +249,8 @@
     border-color: rgba(0, 0, 0, 0.096);
     border-width: 2px;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.096);
+    background: #fbfbfb;
+
 
     @media (max-width: 400px) {
       display: flex;
