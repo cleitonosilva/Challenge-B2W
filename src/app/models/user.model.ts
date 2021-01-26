@@ -1,5 +1,5 @@
 import { Registered } from './registered.model';
-import { Dados } from "./dados.model";
+import { Dob } from "./dados.model";
 import { Id } from "./id.model";
 import { Login } from "./login.model";
 import { Name } from "./name.model";
@@ -8,7 +8,7 @@ import { Locations } from './location.model';
 
 export class Usuario {
    cell: string;
-   dados: Dados;
+   dob: Dob;
    email: string;
    gender: string;
    id: Id;

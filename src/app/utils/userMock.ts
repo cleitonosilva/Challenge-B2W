@@ -1,4 +1,5 @@
-const dados = {
+
+const dob = {
   age : 32, 
   date : "15/09/1989", 
   };
@@ -50,7 +51,7 @@ const register = {
 
 export const userMockData = {
   cell: "21964099980",
-  dados : dados,
+  dob : dob,
   email: "cleiton.o.dev@gmail.com",
   gender: "masc",
   id: id,
