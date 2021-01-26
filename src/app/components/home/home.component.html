@@ -1,16 +1,14 @@
 <nav class="navbar navbar-expand-lg   nenu--box ">
     <div class="container-fluid">
-      <a class="navbar-brand menu--text" href="#">Navbar</a>
-      
-     
-        
-      <div class="d-flex  menu--dropdown ">
+      <a class="navbar-brand menu--title" href="#">Users_like.me</a>
+
+      <div class="d-flex  menu--dropdown">
           
-            <ul class=" me-auto d-flex  dropdow--toogle" style="list-style: none">
+            <ul class=" me-auto d-flex  dropdow--toogle"  style="list-style: none">
           
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle menu--text " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    
+                <li class="nav-item dropdown" >
+                  <a class="nav-link dropdown-toggle menu--text " *ngIf="followUser" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Follow {{totalUser}} User.
                   </a>
                   <ul  class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <a class="drop--title"> Follow {{totalUser}} User.</a>
@@ -21,8 +19,8 @@
                         <img class="img--circle" [src]="item.urlImage" >
                       </div>
                       <div class="drop--user">
-                        <p class="user--title"> {{item.firstname}} e {{item.lastname}}  </p>
-                        <p class="user--subTitle"> {{item.city}} e {{item.country}} </p> 
+                        <p class="user--title"> {{item.firstname}} {{item.lastname}}  </p>
+                        <p class="user--subTitle"> {{item.city}},{{item.country}} </p> 
                       </div>
                       <div>
                         <button class="drop--btn"  (click)="unfollow(item.firstname)"> Unfollow</button>
@@ -55,9 +53,10 @@
             <div class="btn--box">
                 <div class="btn--guard">
             </div>
-
                 <div class="btn--guard">
-                    <button  class="btn--user" (click)="follow(usuario.name.first, usuario.name.last)" > Follow </button>
+                    <button *ngIf="controle" class="btn--user" (click)="follow(usuario.name.first, usuario.name.last)" > {{inscrible}} </button>
+
+                    <button *ngIf="!controle" class="btn--user--fl" (click)="follow(usuario.name.first, usuario.name.last)" > {{inscrible}} </button>
                 </div>
                 <div class="btn--guard--two">
                     <button  class="btn--user--two" (click)="tryTheNextone()"> Try the next one</button>
@@ -84,10 +83,10 @@
                 age: {{usuario.dob.age}} years old
               </p>
               <div class="personal--more">
-               <button class="personal--btn">see more</button>
+               <button (click)="mostrar()"  class="personal--btn">see more</button>
               </div>
                
-              <div>
+              <div *ngIf="aparecer">
                 <p class="personal--info">
                 gender: {{usuario.gender}}
                 </p>
@@ -111,10 +110,10 @@
                 phone 1: {{usuario.phone}}
               </p>
               <div class="personal--more">
-                <button class="personal--btn">see more</button>
+                <button (click)="mostrar()" class="personal--btn">see more</button>
               </div>
               
-              <div>
+              <div *ngIf="aparecer" >
                 <p class="personal--info">
                 state: {{usuario.location.state}}
                 </p>
