@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   controle: boolean = true;
   @Input() totalUser: number = 0;
   aparecer: boolean;
-  inscrible: string = "Follow"
+  inscrible: string = 'Follow'
  
 
   constructor(private usersService : UsersService) { }
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
     }; 
 
 
-  follow(first: string, last: string){
+  follow(first: any, last: any){
     
     if(this.followUser.find(x => x.firstname + x.lastname == first + last)){
       this.controle = false;
@@ -71,8 +71,7 @@ export class HomeComponent implements OnInit {
     } else 
     {
       this.aparecer = true;
-    }
-    
+    };
   }
 
 }
