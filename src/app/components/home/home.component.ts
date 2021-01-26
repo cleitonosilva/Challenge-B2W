@@ -15,6 +15,9 @@ export class HomeComponent implements OnInit {
   followUser : Follow[] = [];
   controle: boolean = true;
   @Input() totalUser: number = 0;
+  aparecer: boolean;
+  inscrible: string = "Follow"
+ 
 
   constructor(private usersService : UsersService) { }
 
@@ -23,7 +26,8 @@ export class HomeComponent implements OnInit {
   }
 
   tryTheNextone(){
-  
+    this.inscrible = "Follow";
+    
     this.usersService.getUsuarios().subscribe((x: any) =>
     {this.usuario = x.results[0];
      this.followUser.find(x => x.firstname == this.usuario.name.first)
@@ -37,8 +41,8 @@ export class HomeComponent implements OnInit {
   follow(first: string, last: string){
     
     if(this.followUser.find(x => x.firstname + x.lastname == first + last)){
-      this.controle = false
-      console.log(this.controle)
+      this.controle = false;
+      this.inscrible = "Following";
     } else {
 
     this.followUser.push(
@@ -51,15 +55,24 @@ export class HomeComponent implements OnInit {
       }
     );
     this.totalUser = this.followUser.length;
-    console.log(this.followUser, this.controle);};
+    };
   };
 
   unfollow(user: string){
-    
-   this.followUser = this.followUser.filter(x => x.firstname != user )
-   this.totalUser = this.followUser.length
-   console.log(this.followUser)
+   this.controle = true; 
+   this.inscrible = "Follow";
+   this.followUser = this.followUser.filter(x => x.firstname != user );
+   this.totalUser = this.followUser.length;
+  }
 
+  mostrar(){
+    if (this.aparecer == true){
+      this.aparecer = false;
+    } else 
+    {
+      this.aparecer = true;
+    }
+    
   }
 
 }
