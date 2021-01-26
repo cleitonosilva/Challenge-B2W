@@ -10,13 +10,26 @@
           
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle menu--text " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                    
                   </a>
-                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <ul  class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <a class="drop--title"> Follow {{totalUser}} User.</a>
+                    <li *ngFor="let item of followUser"> 
+                      <div class="dropdown-item">
+                      <div class="drop--box">
+                        <div class="drop-img">
+                        <img class="img--circle" [src]="item.urlImage" >
+                      </div>
+                      <div class="drop--user">
+                        <p class="user--title"> {{item.firstname}} e {{item.lastname}}  </p>
+                        <p class="user--subTitle"> {{item.city}} e {{item.country}} </p> 
+                      </div>
+                      <div>
+                        <button class="drop--btn"  (click)="unfollow(item.firstname)"> Unfollow</button>
+                      </div>
+                    </div>
+                      </div>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -24,7 +37,7 @@
       </div>
   
   </nav>
-  <section >
+  <section style="background: #f6f6f6;" >
       <div class="section--home">
         <div class="box--info">
             <p class="box--title">space</p>
@@ -44,10 +57,10 @@
             </div>
 
                 <div class="btn--guard">
-                    <button  class="btn--user"></button>
+                    <button  class="btn--user" (click)="follow(usuario.name.first, usuario.name.last)" > Follow </button>
                 </div>
                 <div class="btn--guard--two">
-                    <button  class="btn--user--two"></button>
+                    <button  class="btn--user--two" (click)="tryTheNextone()"> Try the next one</button>
                 </div>
             </div>
 
@@ -61,31 +74,61 @@
 
       <div class="cards--box">
         <div class="card--user">
-            <div class="card--personal">
+            
+          <div class="card--personal">
               <h1 class="card--title">Personal Info</h1>
               <p class="personal--info">
-                born at:
+                born at: {{usuario.nat}}
               </p>
               <p class="personal--info">
-                born at:
+                age: {{usuario.dob.age}} years old
               </p>
               <div class="personal--more">
-               <button class="personal--btn">veja mais</button>
+               <button class="personal--btn">see more</button>
               </div>
+               
+              <div>
+                <p class="personal--info">
+                gender: {{usuario.gender}}
+                </p>
+                <p class="personal--info">
+                Date: {{usuario.dob.date}} 
+                </p>
               
-
+                <p class="personal--info">
+                  Last Name: {{usuario.name.last}} 
+                  </p>
+                </div>
             </div>
+            
+            
             <div class="card--contact">
               <h1 class="card--title">Contact info</h1>
               <p class="personal--info">
-                email:
+                email: {{usuario.email}}
               </p>
               <p class="personal--info">
-                phone 1:
+                phone 1: {{usuario.phone}}
               </p>
               <div class="personal--more">
-                <button class="personal--btn">veja mais</button>
+                <button class="personal--btn">see more</button>
               </div>
+              
+              <div>
+                <p class="personal--info">
+                state: {{usuario.location.state}}
+                </p>
+                <p class="personal--info">
+                City: {{usuario.location.city}} 
+                </p>
+              
+                <p class="personal--info">
+                  Street: {{usuario.location.street.name}} 
+                </p>
+              
+                </div>
+
+
             </div>
         </div>
 
