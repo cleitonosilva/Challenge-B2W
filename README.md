@@ -2,12 +2,18 @@
 Challenge B2W 
 </h1>
 
+<h4>
+ Versão Tablet
+</h4>
 <h1 align="center">    
-<img width="100%" src="./src/assets/b2wone.png">
+<img width="50%" src="./src/assets/b2wone.png">
 </h1>
 
+<h4>
+ Versão Mobile
+</h4>
 <h1 align="center">    
-<img width="100%" src="./src/assets/b2wtwo.png">
+<img width="50%" src="./src/assets/b2wtwo.png">
 </h1>
 
 # Sobre
@@ -37,7 +43,7 @@ O projeto está sendo desenvolvido com as seguintes tecnologias:
  Em toda a aplicação foi utilizada a metodologia BEM como organizador do código do SCSS. 
 
  A aplicação foi desenvolvida sem nenhuma documentação do xd ou figma. 
-  
+
 ...
 
 
