@@ -1,12 +1,14 @@
 <h1>
-Em construção
+Challenge B2W 
 </h1>
 
 <h1 align="center">    
-<img width="50%" src="./src/assets/pexels-pixabay-159306.jpg">
+<img width="100%" src="./src/assets/b2wone.png">
 </h1>
 
-
+<h1 align="center">    
+<img width="100%" src="./src/assets/b2wtwo.png">
+</h1>
 
 # Sobre
 
@@ -26,23 +28,29 @@ O projeto está sendo desenvolvido com as seguintes tecnologias:
 - Angular 
 - Ngx Bootstrap 
  
- 
 
  # Resumo 
+ A aplicação é uma rede social, aplicada com conceito mobile first, onde o primeiro perfil a aparecer é o do desenvolvedor, é possível seguir cada perfil, caso o perfil esteje sendo seguido, na caixinha no canto inferior direito, aparecerá todos os úsuarios que estão sendo seguidos e também um botão com a possibilidade de deixar de seguir aquele perfil, note que se o perfil já estiver sendo seguido não há possibilidade de segui-lo novamente e o botão de Follow ficará destacado em vermelho. 
 
+ Utilizando conceitos de navegação entre componentes (input e output) onde pelo tamanho da aplicação e suas regras de negócio não precisava ser aplicado controle de estado com NgRx. 
+ 
+ Em toda a aplicação foi utilizada a metodologia BEM como organizador do código do SCSS. 
+
+ A aplicação foi desenvolvida sem nenhuma documentação do xd ou figma. 
+  
 ...
 
 
-<!-- # Como baixar o projeto 
+# Como baixar o projeto 
 
 ```bash
 
 # clonar o repositório 
-$ https://github.com/cleitonosilva/desafio-vaga-PickPay
+$ https://github.com/cleitonosilva/Challenge-B2W
 
 # entrar no diretório 
 
-$ cd desafioPickPay
+$ cd b2w-challenge
 
 # instalar as dependências 
 
@@ -52,7 +60,10 @@ $ npm install
 
 $ ng serve 
 
-``` -->
+```
+
+
+
 # Contato
 Desenvolvido por Cleiton Oliveira
 - telefone: 21 - 964099980
